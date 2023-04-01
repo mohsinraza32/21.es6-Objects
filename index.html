@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6 Objects</title>
+</head>
+<body>
+    <h1>es6 Objects</h1>
+
+    <script>
+        // let myArr = [2,3,4,5,6,7,8,8,9];   // This is a array.
+        
+
+        //javascript object
+        //JSON => javascript object natation
+        // let student = {
+        //     name:"john",
+        //     age: 30,
+        //     isAdmin: true,
+        //     courses:["html","css","js",{}],
+        //     isMarried: false,
+        //     book:{
+        //         name:"Herry poter",
+        //         price: 500,
+        //     }
+        // };
+
+        // console.log(student.name);
+        // console.log(student.isAdmin);
+        // console.log(student.age);
+
+        // console.log(student.courses);
+
+        // console.log(student.courses[0]);
+        // console.log(student.courses[1]);
+        // console.log(student.courses[2]);
+        // console.log(student.courses[3]);
+
+        // console.log(student.book.name);
+
+
+        // let student = {
+        //     name:"john",
+        //     age: 30,
+        //     isAdmin: true,
+        //     courses:["html","css","js",{}],
+        //     isMarried: false,
+        //     book:{
+        //         name:"Herry poter",
+        //         price: 500,
+        //     }
+        // };
+
+        // console.log("before: " , student);
+        
+        // student.name = "mohsin";
+        // student.age  = 23;
+        // student.courses[0] = "html5";
+
+        // console.log("After: " , student);
+
+
+        // Cloning objects
+
+        let person = {
+            name: "malik",
+            age: 28,
+            isAdmin: true,
+            courses: ["html","css","js"],
+
+        };
+         
+
+        // shallow cloning
+        // let personCopy = person;
+        // let personCopy = {...person};
+
+        //deep cloning
+
+        let stringForm = JSON.stringify(person);
+        let personCopy = JSON.parse(stringForm);
+
+        personCopy.name = "jhon";
+        person.age = 30;
+        person.courses[0] = "html5";
+
+        console.log("person: " , person);
+        console.log("personCopy: " , personCopy);
+
+
+    </script>
+</body>
+</html>
